@@ -151,11 +151,11 @@
         rule: allow
         port: '2912'
 
-    - name: Allow all access to port 46399
+    - name: Allow all access to port 53
       become: true
       community.general.ufw:
         rule: allow
-        port: '46399'
+        port: '53'
 
     - name: Allow all access to port 3000
       become: true
