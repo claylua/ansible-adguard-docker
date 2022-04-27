@@ -41,12 +41,9 @@
         - python3-pip
         - python3-setuptools
         - htop
-        - vim
-        - glances
 
-    - name: Add Docker GPG key
-      apt_key:
-        url: https://download.docker.com/linux/debian/gpg
+    - name: Add  Docker’s official GPG key
+      shell: curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
     - name: add docker repository to apt
       become: true
